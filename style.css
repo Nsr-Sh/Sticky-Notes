@@ -1,0 +1,273 @@
+@font-face {
+  font-family: 'note';
+  src: url(fonts/Stickynotes-ywLPd.otf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #efefef;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  height: 200px;
+  width: 100%;
+  background-image: url(images/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: 1000px auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+}
+
+.container {
+  height: 100%;
+  width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+header>.container>a {
+  color: #fff;
+  margin: 0;
+  font-family: 'note';
+  font-size: 70px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+header>.container>img {
+  height: 250px;
+  vertical-align: middle;
+  float: right;
+  transform: translateY(-20px);
+  margin-right: 20px;
+}
+
+/* main part */
+#main .container {
+  padding: 50px 15px;
+}
+
+/*-------------------- add notes------------------- */
+.stickynotes {
+  background-color: #fff;
+  padding: 33px 33px 20px;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 11%);
+  transition: all 0.3s;
+  position: relative;
+  margin-bottom: 35px;
+  width: 30%;
+  float: left;
+  margin-right: 35px;
+}
+
+.stickynotes:hover {
+  box-shadow: 2px 7px 9px rgb(0 0 0 / 11%);
+  /* cursor: move; */
+}
+
+/* input */
+.stickynotes>input {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 23px;
+  font-family: poppins;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.stickynotes input::placeholder,
+.stickynotes textarea::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.stickynotes>span {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.stickynotes>hr{
+  margin: 12px 0;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.17);}
+
+
+/* textarea */
+.stickynotes>textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  height: 85px;
+  width: 100%;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: transparent;
+  margin-bottom: 15px;
+  line-height: 28px;
+  overflow: auto;
+}
+
+.stickynotes>textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* scrollbar */
+.stickynotes>textarea::-webkit-scrollbar {
+  width: 7px;
+  background-color: #cfcfcf;
+}
+
+.stickynotes>textarea::-webkit-scrollbar-thumb {
+  background-color: #7c7c7c;
+}
+
+/* color palette */
+.stickynotes .colorpalette {
+  padding: 15px;
+  border-radius: 70px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 31%);
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translatex(-50%) scale(0);
+  transition: all 0.3s ease-in-out;
+
+  /* pointer-events: none; */
+}
+
+.stickynotes .colorpalette.show {
+  transform: translatex(-50%) scale(1);
+
+}
+
+.stickynotes .colorpalette div {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+/* colors */
+.yellow {
+  background-color: #fffa65;
+}
+
+.purple {
+  background-color: #da9afa;
+}
+
+.pink {
+  background-color: #ffcccc;
+}
+
+.green {
+  background-color: #73f5a3;
+}
+
+.blue {
+  background-color: #7efff5;
+}
+
+.white {
+  background-color: #fff;
+} 
+
+.clr:last-of-type{
+  border:1px solid #bbb;
+
+}
+
+.stickynotes>.colorpalette>div:hover {
+  border: 2px dashed #777;
+}
+
+.stickynotes>.icons {
+  text-align: center;
+}
+
+/* bottom icons */
+.stickynotes>.icons>i {
+  margin: 2px 7px;
+  color: #000;
+  opacity: 0.2;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.stickynotes>.icons>i:hover {
+  opacity: 0.5;
+}
+
+/*-------------------- single note------------------- */
+
+/* title */
+.stickynotes h2 {
+  font-size: 23px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* text content */
+.stickynotes p {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.69);
+  margin-top: 0;
+  margin-bottom: 25px;
+  line-height: 28px;
+  height: 85px;
+  overflow: auto;
+  white-space: pre-wrap;
+
+}
+
+/* scrollbar */
+.stickynotes>p::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.stickynotes>p::-webkit-scrollbar {
+  width: 7px;
+  background-color: #cfcfcf;
+}
+
+.stickynotes>p::-webkit-scrollbar-thumb {
+  background-color: #7c7c7c;
+}
+/* ---------clear btn------ */
+#clear{
+  background-image: linear-gradient(to top left,#1ddecd,#58acd4);
+  box-shadow: 0 8px 10px -3px #32d9dbbd;
+  width: 60px;
+  height: 66px;
+  padding: 18px;
+  position: fixed;
+  top: 85vh;
+  font-size: 23px;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+ #clear:hover{
+  box-shadow: 0 8px 10px 1px #32d9dbbd;
+}
+
+#clear span{
+padding-left:12px;
+}

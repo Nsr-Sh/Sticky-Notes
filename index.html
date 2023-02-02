@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="#">Sticky Notes</a>
+        <img src="images/paper.png" alt="" />
+      </div>
+    </header>
+
+    <!-- main part -->
+    <div id="main">
+      <div class="container">
+        <form class="stickynotes">
+          <input type="text" placeholder="Type a title ..." />
+          <span>Last update: </span>
+          <hr />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Type a description ..."
+          ></textarea>
+          <!-- color palette -->
+          <div class="colorpalette">
+            <div class="clr yellow"></div>
+            <div class="clr purple"></div>
+            <div class="clr pink"></div>
+            <div class="clr green"></div>
+            <div class="clr blue"></div>
+            <div class="clr white"></div>
+          </div>
+
+          <!-- buttom icons -->
+          <div class="icons">
+            <i class="fa-solid fa-palette"></i>
+            <i class="fa-solid fa-check"></i>
+          </div>
+        </form>
+        <section></section>
+      </div>
+      <div id="clear">
+        <i class="fa-solid fa-arrows-rotate"></i>
+        <span>Delete All Notes</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
